@@ -31,25 +31,25 @@ We believe this work could provide a better understanding of the effects of augm
 
  Challenges \
 The following are the main identified challenges:
-* Number of Human activity recognition datasets is fewer, limiting our study.
-* Interpreting the results of data augmentation on a per-class basis could be ambiguous.
+* Number of Human activity recognition datasets is fewer, limiting our study
+* Interpreting the results of data augmentation on a per-class basis could be ambiguous
 
  Requirements for Success
-* Skills required are python programming and familiarity with a Deep Learning library. We shall Keras with a Tensorflow backend. 
-* Adequate compute for training deep learning models, models are trainable using google colab GPUs.  
+* Skills required are python programming and familiarity with a Deep Learning library. We shall Keras with a Tensorflow backend 
+* Adequate compute for training deep learning models, models are trainable using google colab GPUs  
 
  Metrics of Success
 * Comparison of dataset augmentation techniques on HAR
 * Make inferences based on the results for the HAR classification problem
-* Deduce the best data augmentation technique and study its performance against models without augmentation. Specifically, the accuracy per class, as well as the effects of various data augmentation techniques, is studied. 
+* Deduce the best data augmentation technique and study its performance against models without augmentation. Specifically, the accuracy per class, as well as the effects of various data augmentation techniques, is studied
 
  Execution Plan
-* Consider a baseline Model and train it without augmentation on the HAR dataset. This shall serve as our baseline. 
-* Perform a literature survey of common augmentation techniques sensor data, understand what is commonly used and pick the best augmentation strategies. 
-* Train the same model with just unique augmentation applied at a time. 
-* Compare the accuracy of each class of the newly created model with the baseline model.
-* Apply more than one augmentation to the data and retrain the model followed by estimating accuracies. 
-* Repeat process with different models and datasets. 
+* Consider a baseline Model and train it without augmentation on the HAR dataset. This shall serve as our baseline
+* Perform a literature survey of common augmentation techniques sensor data, understand what is commonly used and pick the best augmentation strategies 
+* Train the same model with just unique augmentation applied at a time
+* Compare the accuracy of each class of the newly created model with the baseline model
+* Apply more than one augmentation to the data and retrain the model followed by estimating accuracies
+* Repeat process with different models and datasets
 
 ## 2. Related Work
 Deep-Learning based Human Activity Recognition has been seeing a lot of recent developments and is well studied in the literature [4], [3]. To tackle the diverse problems that are distinct to the Sensor/Human Activity Recognition Dataset such as the amount of Dataset Fidelity, High Frequency/Random Noise Corruption, variation in temporal scales, and sampling frequencies that mask the original data [2], researchers in continuous pursuit of strategies that would help the Deep learning models to still capture distinguish between activities in presence of these activities[5]. This problem is compounded by the lack of relevant datasets which align closely with the rich, diverse data representations that sensors yield in real-time. Augmentation strategies are inevitably utilized to address this issue thereby increasing the amount of the dataset size available at one’s disposal for attempting to train complex data-hungry Deep Learning models. Hence, there is a strong incentive to conduct further investigation along the lines of analyzing Augmentation and its impact, implications, and performance benefits that could be potentially reaped while exploring the fairness implications of models in serving the predictions for a candidate dataset that might be randomly sampled from any of the class entities.
@@ -94,6 +94,7 @@ The study involves a model architecture of varying complexity  to understand the
  * [DeepConvLSTM](https://github.com/shreyasrajesh0308/ece209as_project/blob/main/data/Evaluation_Results/UCI_HAR/UCI_HAR_DeepConv_LSTM.JPG)
  * ![DeepConvLSTM](/docs/Evaluation_Results/UCI_HAR_DeepConv_LSTM.JPG "UCI HAR DeepConvLSTM")
 
+![Book logo]([/least-github-pages/assets/logo.png](https://github.com/shreyasrajesh0308/ece209as_project/blob/main/data/Evaluation_Results/UCI_HAR/UCI_HAR_LSTM.JPG))
 ### USC HAD
 * [LSTM](https://github.com/shreyasrajesh0308/ece209as_project/blob/main/data/Evaluation_Results/USC_HAD/USC_HAD_LSTM.JPG)
 * ![LSTM](/docs/Evaluation_Results/USC_HAD_LSTM.JPG "USC HAD LSTM")
