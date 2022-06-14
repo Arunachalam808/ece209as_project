@@ -14,6 +14,7 @@
 
 ## Abstract
 
+
 ## 1. Introduction
 
 Regularization is a commonly used technique to ensure better generalization in neural network models. Recent works show that Data Augmentation (DA) for images using ResNet50 has a detrimental effect on closer analysis, the accuracy of select classes has dropped (for example is the ‘barn spider’ class accuracy falls from 68% to 46% by introducing random crop DA during training). The work shows that there can be a massive risk of bias being introduced with many classes having a stark reduction in accuracy after augmentation in large image recognition models. The study noted that even in data agnostic techniques like weight decay, there is imbalance in the change of class accuracies.
@@ -41,11 +42,11 @@ The following are the main identified challenges:
 
  Metrics of Success
 
-*Comparison of dataset augmentation techniques on HAR
+* Comparison of dataset augmentation techniques on HAR
 * Make inferences based on the results for the HAR classification problem
-*Deduce the best data augmentation technique and study its performance against models without augmentation. Specifically, the accuracy per class, as well as the effects of various data augmentation techniques, is studied. 
+* Deduce the best data augmentation technique and study its performance against models without augmentation. Specifically, the accuracy per class, as well as the effects of various data augmentation techniques, is studied. 
 
- 8. Execution Plan
+ Execution Plan
 
 * Consider a baseline Model and train it without augmentation on the HAR dataset. This shall serve as our baseline. 
 * Perform a literature survey of common augmentation techniques sensor data, understand what is commonly used and pick the best augmentation strategies. 
@@ -58,28 +59,28 @@ The following are the main identified challenges:
 Deep-Learning based Human Activity Recognition has been seeing a lot of recent developments and is well studied in the literature [4], [3]. To tackle the diverse problems that are distinct to the Sensor/Human Activity Recognition Dataset such as the amount of Dataset Fidelity, High Frequency/Random Noise Corruption, variation in temporal scales, and sampling frequencies that mask the original data [2], researchers in continuous pursuit of strategies that would help the Deep learning models to still capture distinguish between activities in presence of these activities[5]. This problem is compounded by the lack of relevant datasets which align closely with the rich, diverse data representations that sensors yield in real-time. Augmentation strategies are inevitably utilized to address this issue thereby increasing the amount of the dataset size available at one’s disposal for attempting to train complex data-hungry Deep Learning models. Hence, there is a strong incentive to conduct further investigation along the lines of analyzing Augmentation and its impact, implications, and performance benefits that could be potentially reaped while exploring the fairness implications of models in serving the predictions for a candidate dataset that might be randomly sampled from any of the class entities.
 
 ## 3. Technical Approach
-Datasets
+### Datasets\
 We consider the following 3 popular open source datasets
-UCIHAR [12]
+#### UCIHAR [12] \
 Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living while carrying a waist-mounted smartphone with embedded inertial sensors
-USC-HAD [11]
+#### USC-HAD [11] \
 The focus of the dataset is healthcare related applications such as physical fitness monitoring The activity data is captured by a high-performance inertial sensing device and includes 12 activities and collected data from 14 subjects
-PAMAP2 [10]
+#### PAMAP2 [10] \
 The PAMAP2 Physical Activity Monitoring dataset contains data of 18 different physical activities, performed by 9 subjects wearing 3 inertial measurement units and a heart rate monitor.
-Augmentations
-For the augmentations, we used the ones which were most effective as listed in []
-Rotation
+### Augmentations \
+For the augmentations, we used the ones which were most effective as listed in [2]
+#### Rotation \
 A method for simulating different sensor positions by plotting a uniformly distributed 3D random axis and a random rotation angle and applying the corresponding rotation to the sample
-Scaling
+#### Scaling \
 Multiply by a random scalar to scale the size of the data in the window to simulate the motion of weaker magnitudes
-Magnify
+#### Magnify \
 Multiply by a random scalar to magnify the size of the data in the window to simulate stronger amplitude motion
-Resampling
+#### Resampling \
 Simulates multiple disturbances by varying the sampling frequency of sensor data 
-Noise Addition
-A method for simulating additional sensor noise by multiplying the raw sample values with values that match uniform distribution
+#### Noise Addition \
+A method for simulating additional sensor noise by multiplying the raw sample values with values that match uniform distribution \
 
-Weight Decay
+### Weight Decay \
 Weight decay adds a penalty to the loss function, which has been well known to enhance model generalization and help prevent overfitting. Here we have added l1 and l2 norms of weights to our existing loss function with coefficient for l1 being 1e-5 and coefficient of l2 being 1e-4.
 Models
 The study involves a model architecture of varying complexity  to understand the impact of regularization. We used a small model with an LSTM architecture model having 54,706 parameters, a medium sized model with Deep ConvLSTM architecture having 416,716 parameters. A larger model with the DeepConvLSTM architecture having 589,388 parameters is also included. All the models used in the study are below
