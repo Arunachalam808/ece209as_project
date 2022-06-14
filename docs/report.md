@@ -34,16 +34,16 @@ The following are the main identified challenges:
 * Number of Human activity recognition datasets is fewer, limiting our study.
 * Interpreting the results of data augmentation on a per-class basis could be ambiguous.
 
- Requirements for Success \
+ Requirements for Success
 * Skills required are python programming and familiarity with a Deep Learning library. We shall Keras with a Tensorflow backend. 
 * Adequate compute for training deep learning models, models are trainable using google colab GPUs.  
 
- Metrics of Success \
+ Metrics of Success
 * Comparison of dataset augmentation techniques on HAR
 * Make inferences based on the results for the HAR classification problem
 * Deduce the best data augmentation technique and study its performance against models without augmentation. Specifically, the accuracy per class, as well as the effects of various data augmentation techniques, is studied. 
 
- Execution Plan \
+ Execution Plan
 * Consider a baseline Model and train it without augmentation on the HAR dataset. This shall serve as our baseline. 
 * Perform a literature survey of common augmentation techniques sensor data, understand what is commonly used and pick the best augmentation strategies. 
 * Train the same model with just unique augmentation applied at a time. 
